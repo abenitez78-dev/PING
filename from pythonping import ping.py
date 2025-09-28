@@ -6,7 +6,7 @@ import time
 ip_destino = input('Introduzca IP o hostname: ')
 
 i = 1
-path = "C:/Users/alejandro.benitez/Desktop/PING/"
+path = input('Ruta de destino: ')
 current_dt = dt.date.today()
 hora_fecha = str(current_dt)
 current_datetime = datetime.now()
@@ -24,4 +24,5 @@ while i >= 0:
     if t >= 5:
         hn_txt = open(path + "Log-" + ip_destino + "_" + hora_fecha + "_" + hora + ".txt", "a")   
         hn_txt.write(f"Tiempo: {t} - Latencia alta {hora_actual} \n")
+
         hn_txt.close()
